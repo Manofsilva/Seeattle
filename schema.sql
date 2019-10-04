@@ -6,7 +6,7 @@ CREATE DATABASE itinerary;
 
 USE itinerary;
 
-CREATE TABLE members (
+CREATE TABLE Members (
     id Integer not null AUTO_INCREMENT,
     username varchar(30) NOT NULL,
     email varchar(50) NOT NULL,
