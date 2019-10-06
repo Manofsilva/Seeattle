@@ -1,5 +1,6 @@
 // link dependencies
 var express = require('express');
+var exphbs = require('express-handlebars');
 
 // setup express app
 var app = express();
@@ -14,6 +15,14 @@ app.use(express.json());
 
 // add static directory
 app.use(express.static('public'));
+
+// Set Handlebars
+var exphbs = require("express-handlebars");
+
+// app.engine is setting the view engine as well as the default layout.
+// this line tells express to look in the /views/layouts folder a main.handlebars
+app.engine("handlebars", exphbs({ defaultLayout: "main"}));
+app.set("view engine","handlebars");
 
 // import routes
 // *********not sure if this is done correctly

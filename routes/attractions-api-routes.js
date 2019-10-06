@@ -20,7 +20,7 @@ module.exports = function(app) {
         })
     });
 
-     // POST route for saving a new post
+     // POST route to db for saving a new attraction entered by user
   app.post("/api/attractions/:attractionSite", function(req, res) {
     console.log(req.params);
     db.Attraction.create({
