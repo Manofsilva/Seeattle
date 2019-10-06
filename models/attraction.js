@@ -2,11 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
     var Attraction = sequelize.define('Attraction', {
         // create an attraction log
-        // attractionId: {
-        //         type: DataTypes.INTEGER,
-        //         autoIncrement: true,
-        //         primaryKey: true
-        // },
+      
         attractionSite: {
                 type: DataTypes.STRING,
                 allowNull: false
@@ -14,5 +10,12 @@ module.exports = function(sequelize, DataTypes) {
 
     });
 
+    // creating the relationship before joining the two tables
+    Attraction.asssociate = function(models){
+        Attraction.hasMany(models.Review, {
+            onDelete: "cascade"
+        });
+    };
+
     return Attraction;
-}
+};
