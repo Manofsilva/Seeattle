@@ -6,9 +6,16 @@ CREATE DATABASE itinerary;
 
 USE itinerary;
 
-CREATE TABLE Members (
-    id Integer not null AUTO_INCREMENT,
-    username varchar(30) NOT NULL,
-    email varchar(50) NOT NULL,
+CREATE TABLE Reviews (
+    id INT not null AUTO_INCREMENT,
+    username VARCHAR(30) NOT NULL,
+    review TEXT NOT NULL,
+    attractionId INT NOT NULL,
     PRIMARY KEY (id)
+);
+
+CREATE TABLE Attractions (
+    attractionId INT NOT NULL AUTO_INCREMENT,
+    attractionSite varchar(50) NOT NULL,
+    PRIMARY KEY (attractionId)
 );

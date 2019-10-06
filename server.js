@@ -17,8 +17,10 @@ app.use(express.static('public'));
 
 // import routes
 // *********not sure if this is done correctly
-require("./routes/api-routes.js")(app);
+require("./routes/reviews-api-routes.js")(app);
 // require("./routes/html-routes.js")(app);
+require("./routes/attractions-api-routes.js")(app);
+
 
 
 // sync our sequelize models and start the express app

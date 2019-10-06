@@ -1,5 +1,10 @@
 USE itinerary;
 
-INSERT INTO Members (username, email) VALUES
-    ("name1", "name1@email.com"),
-    ("name2", "name2@email.com");
+INSERT INTO Reviews (username, review) VALUES
+    ("name1", "It was fantastic"),
+    ("name2", "Could have been better");
+
+INSERT INTO Attractions (attractionSite) VALUES
+    ("Space Needle"),
+    ("Aquarium"),
+    ("Volunteer Park");

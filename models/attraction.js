@@ -1,8 +1,18 @@
 // create an attraction table
 module.exports = function(sequelize, DataTypes) {
-    Var Attraction = sequelize.define('Attractions', {
+    var Attraction = sequelize.define('Attraction', {
         // create an attraction log
-        foreignKey:
+        // attractionId: {
+        //         type: DataTypes.INTEGER,
+        //         autoIncrement: true,
+        //         primaryKey: true
+        // },
+        attractionSite: {
+                type: DataTypes.STRING,
+                allowNull: false
+        }
 
-    })
+    });
+
+    return Attraction;
 }

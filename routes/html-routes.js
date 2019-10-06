@@ -17,6 +17,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
+//   change the following to handlebars stuff lines 23 and 28
   // itinerary route loads itinerary.html
   app.get("/itinerary", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/itinerary.html"));
