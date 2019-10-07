@@ -4,7 +4,15 @@ var db = require('../models');
 
 module.exports = function(app) {
 
-// GET route for getting all of the table info that the user searches
+    // GET route for getting all of the reviews
+app.get("/api/revews/", function(req, res) {
+    db.Reviews.findAll({})
+    .then(function(dbReviews) {
+        res.json(dbReviews);
+    });
+});
+
+// GET route for returning a review on specific attraction
 app.get("/api/reviews/:attractionId", function(req, res) {
     db.Reviews.findAll({
         where: {
@@ -31,6 +39,31 @@ app.post("/api/reviews", function(req, res) {
     }).catch(function(err){
         res.json({err: err})
     })
+});
+
+// PUT route for updating reviews
+app.put("/api/reviews", function(req, res) {
+    db.Reviews.update(req.body,
+        {
+            where: {
+                attractionId: req.body.attractionId
+            }
+        })
+        .then(function(dbReviews) {
+            res.json(dbReviews);
+        });
+});
+
+// DELETE route for deleting reviews
+app.delete("/api/reviews/:attractionId", function(req, res) {
+    db.Reviews.destroy({
+        where: {
+            attractionId: req.params.attractionId
+        }
+    })
+    .then(function(dbReviews) {
+        res.json(dbReviews);
+    });
 });
 
 }

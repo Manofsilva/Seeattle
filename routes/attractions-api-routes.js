@@ -34,7 +34,7 @@ module.exports = function(app) {
 //   GET route that includes all reviews associated with all tourist attractions
   app.get("/api/attractions", function(req, res) {
       db.Attraction.findAll({
-          include: [db.Review]
+          include: [db.Reviews]
       }).then(function(dbAttraction) {
           res.json(dbAttraction);
       });
