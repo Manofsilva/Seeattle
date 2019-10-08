@@ -27,7 +27,7 @@ app.set("view engine","handlebars");
 // import routes
 // *********not sure if this is done correctly
 require("./routes/reviews-api-routes.js")(app);
-// require("./routes/html-routes.js")(app);
+require("./routes/html-routes.js")(app);
 require("./routes/attractions-api-routes.js")(app);
 
 

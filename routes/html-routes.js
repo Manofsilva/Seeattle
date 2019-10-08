@@ -17,7 +17,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-//   change the following to handlebars stuff lines 23 and 28
+//   change the following to handlebars stuff lines 23 and 28 if doing handlebars
   // itinerary route loads itinerary.html
   app.get("/itinerary", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/itinerary.html"));
@@ -25,7 +25,7 @@ module.exports = function(app) {
 
   // review route loads blog.html
   app.get("/review", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/review.html"));
+    res.sendFile(path.join(__dirname, "../public/reviews.html"));
   });
 
 };
