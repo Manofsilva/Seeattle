@@ -28,16 +28,31 @@ module.exports = function(app) {
     })
       .then(function(dbAttraction) {
         res.json(dbAttraction);
-      });
+      }).catch(function(err){
+        res.json({err: err})
+    })
   });
 
-//   GET route that includes all reviews associated with all tourist attractions
+  // GET route for all attractions
   app.get("/api/attractions", function(req, res) {
+    console.log(req.params);
+    db.Attraction.findAll({})
+    .then(function(dbAttraction) {
+        res.json(dbAttraction);
+    }).catch(function(err){
+      res.json({err: err})
+  })
+});
+
+//   GET route that includes all reviews associated with all tourist attractions
+  app.get("/api/attractions/reviews/:attraction", function(req, res) {
       db.Attraction.findAll({
           include: [db.Reviews]
       }).then(function(dbAttraction) {
           res.json(dbAttraction);
-      });
+      }).catch(function(err){
+        res.json({err: err})
+    })
   });
 
 
@@ -50,7 +65,9 @@ module.exports = function(app) {
         include: [db.Review]
     }).then(function(dbAttraction) {
         res.json(dbAttraction);
-    });
+    }).catch(function(err){
+      res.json({err: err})
+  })
 });
 
 
