@@ -15,7 +15,6 @@ module.exports = function(sequelize, DataTypes) {
     // creating a relationship between two tables
     Review.associate = function(models){
         Review.belongsTo(models.Attraction, {
-            
             foreignKey: {
                 allowNull: false
             }

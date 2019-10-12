@@ -15,6 +15,7 @@ module.exports = function (app) {
             })
     });
 
+    // WORKS
     // GET route for returning a review on specific attraction
     app.get("/api/reviews/:attractionId", function (req, res) {
         db.Review.findAll({
@@ -37,7 +38,7 @@ module.exports = function (app) {
         db.Review.create({
             username: req.body.username,
             review: req.body.review,
-            AttractionId: 1
+            AttractionId: req.body.attractionId
         }).then(function (dbReview) {
             // We have access to the new review as an argument inside of the callback function
             res.json(dbReview);

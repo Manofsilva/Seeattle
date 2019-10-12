@@ -44,16 +44,21 @@ module.exports = function (app) {
       })
   });
 
+  // DOES NOT WORK
   //   GET route that includes all reviews associated with all tourist attractions
-  app.get("/api/attractions/reviews/:attraction", function (req, res) {
-    db.Attraction.findAll({
-      include: [db.Reviews]
-    }).then(function (dbAttraction) {
-      res.json(dbAttraction);
-    }).catch(function (err) {
-      res.json({ err: err })
-    })
-  });
+  // app.get("/api/attractions/:id", function (req, res) {
+  //   db.Attraction.findAll({
+  //       where: {
+  //           id: req.params.id
+  //       },
+  //     include: [{association: 'Reviews'}]
+  //   }).then(function (dbAttraction) {
+  //     res.json(dbAttraction);
+  //   }).catch(function (err) {
+  //     console.log(err);
+  //     res.json({ err: err })
+  //   })
+  // });
 
 
   //   GET route that includes all reviews associated with one tourist attraction
