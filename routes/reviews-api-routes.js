@@ -37,7 +37,7 @@ module.exports = function (app) {
         db.Review.create({
             username: req.body.username,
             review: req.body.review,
-            attraction: req.body.attractionId
+            AttractionId: 1
         }).then(function (dbReview) {
             // We have access to the new review as an argument inside of the callback function
             res.json(dbReview);
