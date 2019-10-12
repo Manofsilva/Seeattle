@@ -1,13 +1,13 @@
 // create a member table
 module.exports = function(sequelize, DataTypes) {
-    var Review = sequelize.define('Reviews', {
+    var Review = sequelize.define('Review', {
        
         username: {
             type: DataTypes.STRING,
             allowNull: false
         },
         review: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false
         }
     });
@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
     // creating a relationship between two tables
     Review.associate = function(models){
         Review.belongsTo(models.Attraction, {
-            onDelete: "cascade",
+            
             foreignKey: {
                 allowNull: false
             }

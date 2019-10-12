@@ -6,13 +6,13 @@
   <title>My Google Map</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="css/styles.css" media="screen" title="no title"> -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" title="no title">
+
   <style>
       #map {
-        height: 400 px;
-        width: 50%;
+        height: 100%;
       }
       html, body {
         height: 100%;
@@ -25,7 +25,7 @@
 <body>
   <h1>My Google Map</h1>
 
-  <div id="map" style="height: 80%"></div>
+  <div id="map"></div>
 
   <!-- Script tag so that the API callback can work. Creat a var called map and set it equal to a new google map object -->
   <script>
@@ -119,7 +119,7 @@
 
 
   <!-- The script tag below has a callback set to initMap so I need to have a function above -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByEDpw1z2hK8tsclHshQ_LmIXUmRxORBU&callback=initMap"
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeZrxEkr6xV-CR2xEHki58ipGEHcOmFAY&callback=initMap"
   async defer></script>
 
 </body>

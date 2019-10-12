@@ -1,9 +1,29 @@
-/* #map {
-    height: 400 px;
-    width: 50%;
+
+  #header {
+    width: 100%;
+    background-color: red;
   }
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  } */
+  .acontainer {
+    width: 100%;
+    margin: auto;
+  }
+  #first {
+    width: 45%;
+    float: left;
+    height: 300px;
+    background-color: blue;
+    margin: 10px 10px;
+  }
+  #second {
+    width: 45%;
+    float: left;
+    height: 300px;
+    background-color: green;
+    margin: 10px 10px;
+  }
+  #clear {
+    clear: both;
+  }
+  #map {
+    height: 500px;
+  }

@@ -13,6 +13,7 @@ module.exports = function(sequelize, DataTypes) {
     // creating the relationship before joining the two tables
     Attraction.asssociate = function(models){
         Attraction.hasMany(models.Review, {
+            onDelete: "cascade"
         });
     };
 
