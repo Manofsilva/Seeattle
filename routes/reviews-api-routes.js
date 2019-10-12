@@ -5,6 +5,7 @@ var db = require('../models');
 module.exports = function (app) {
 
     // GET route for getting all of the reviews
+    // WORKS
     app.get("/api/reviews", function (req, res) {
         console.log(req.params);
         db.Review.findAll({})
@@ -38,7 +39,7 @@ module.exports = function (app) {
         db.Review.create({
             username: req.body.username,
             review: req.body.review,
-            AttractionId: req.body.attractionId
+            AttractionId: req.body.AttractionId
         }).then(function (dbReview) {
             // We have access to the new review as an argument inside of the callback function
             res.json(dbReview);
@@ -46,6 +47,8 @@ module.exports = function (app) {
             res.json({ err: err })
         })
     });
+
+
 
     // PUT route for updating reviews
     app.put("/api/reviews", function (req, res) {

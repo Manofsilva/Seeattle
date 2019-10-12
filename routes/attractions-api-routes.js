@@ -5,20 +5,6 @@ var db = require('../models');
 // This is to test if the routes work with dummy data
 
 module.exports = function (app) {
-  // app.post("/api/attractions", function(req, res) {
-  //     console.log("testing");
-  // create takes an argument of an object describing the item we want to insert
-  // into our table. In this case we just we pass in an object with a text and
-  // complete property
-  // db.Attraction.create({
-  //     attractionSite: "DC"
-  // }).then(function(dbAttraction) {
-  // We have access to the new attraction as an argument inside of the callback function
-  //         res.json(dbAttraction);
-  //     }).catch(function(err){
-  //         res.json({err: err})
-  //     })
-  // });
 
   // POST route to db for saving a new attraction entered by user
   app.post("/api/attractions/:attractionSite", function (req, res) {
@@ -45,13 +31,12 @@ module.exports = function (app) {
   });
 
   // DOES NOT WORK
-  //   GET route that includes all reviews associated with all tourist attractions
+    // GET route that includes all reviews associated with all tourist attractions
   // app.get("/api/attractions/:id", function (req, res) {
   //   db.Attraction.findAll({
   //       where: {
-  //           id: req.params.id
-  //       },
-  //     include: [{association: 'Reviews'}]
+  //         id: req.params.id
+  //       }
   //   }).then(function (dbAttraction) {
   //     res.json(dbAttraction);
   //   }).catch(function (err) {
@@ -60,7 +45,7 @@ module.exports = function (app) {
   //   })
   // });
 
-
+// I DONT THINK THAT I NEED IT
   //   GET route that includes all reviews associated with one tourist attraction
   app.get("/api/attractions/:review", function (req, res) {
     db.Attraction.findOne({
