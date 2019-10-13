@@ -9,9 +9,9 @@ $.get("/api/reviews", function(data) {
         var row = $("<div>");
         row.addClass("review");
   
-        row.append("<p>" + data[i].username + " reviewed.. </p>");
+        row.append("<p>" + data[i].username + " reviewed: </p>");
         row.append("<p>" + data[i].review + "</p>");
-        row.append("<p>" + data[i].attraction + "</p>");
+        row.append("<p>" + data[i].AttractionId + "</p>");
         row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
   
         $("#review-area").prepend(row);
@@ -26,19 +26,13 @@ $.get("/api/reviews", function(data) {
 $("#review-submit").on("click", function(event) {
   event.preventDefault();
 
-  // var review = []
-
-  // Make a newReview object
-  // var newReview = {
+  // set variables
 
     var username = $("#username").val().trim();
     var review = $("#review-box").val().trim();
     var attraction = $("#attraction").val().trim();
-  
-    // };
-  
-  // console.log(newReview);
 
+    // Setup my newReviewData object
   var newReviewData = {
     username: username,
     review: review,
@@ -46,7 +40,7 @@ $("#review-submit").on("click", function(event) {
   };
 
   console.log(newReviewData);
-  // review.push(newReviewData);
+
 
   // Send an AJAX POST-request with jQuery
   $.post("/api/reviews", newReviewData)
@@ -71,4 +65,3 @@ $("#review-submit").on("click", function(event) {
     $("#attraction").val("");
 
 });
-

@@ -55,7 +55,7 @@ module.exports = function (app) {
         db.Review.update(req.body,
             {
                 where: {
-                    attractionId: req.body.attractionId
+                    AttractionId: req.body.AttractionId
                 }
             })
             .then(function (dbReview) {
@@ -67,7 +67,7 @@ module.exports = function (app) {
     app.delete("/api/reviews/:attractionId", function (req, res) {
         db.Review.destroy({
             where: {
-                attractionId: req.params.attractionId
+                AttractionId: req.params.AttractionId
             }
         })
             .then(function (dbReview) {
