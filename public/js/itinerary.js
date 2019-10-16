@@ -93,4 +93,35 @@ function handleLocationError(content, position) {
     infoWindow.setContent(content);
     infoWindow.open(map);
 
-}
+};
+
+
+
+// Adding event listener for when user clicks the add-bttn
+$("#search-submit").on("click", function() {
+
+// variable for using the search functionality and adding it to the itinerary for the first day
+var itineraryInput = $("#search").val();
+
+console.log(itineraryInput);
+
+var row = $("<div>");
+    row.addClass("attraction");
+
+    row.append("<p>" + itineraryInput + "</p>");
+
+
+    $("#first").prepend(row);
+})
+
+
+// .then(function() {
+
+//     var row = $("<div>");
+//     row.addClass("attraction");
+
+//     row.append("<p>" + itineraryInput + "</p>");
+
+
+//     $("#trans_first").prepend(row);
+// });
