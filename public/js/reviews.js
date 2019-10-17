@@ -43,7 +43,10 @@ $("#review-submit").on("click", function(event) {
 
 
   // Send an AJAX POST-request with jQuery
-  $.post("/api/reviews", newReviewData)
+  $.post("/api/reviews", newReviewData, function() {
+    console.log('this post route works')
+  })
+  
     // On success, run the following code
     .then(function() {
 
@@ -58,6 +61,7 @@ $("#review-submit").on("click", function(event) {
       $("#review-area").prepend(row);
 
     });
+  
 
     // Empty each input box by replacing the value with an empy string
     $("#username").val("");

@@ -96,7 +96,7 @@ function handleLocationError(content, position) {
 };
 
 
-
+// The following is for adding the attractions to the itinerary list
 // Adding event listener for when user clicks the add-bttn
 $("#search-submit").on("click", function() {
 
@@ -113,15 +113,3 @@ var row = $("<div>");
 
     $("#first").prepend(row);
 })
-
-
-// .then(function() {
-
-//     var row = $("<div>");
-//     row.addClass("attraction");
-
-//     row.append("<p>" + itineraryInput + "</p>");
-
-
-//     $("#trans_first").prepend(row);
-// });

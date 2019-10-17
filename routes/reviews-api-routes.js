@@ -21,11 +21,11 @@ module.exports = function (app) {
     app.get("/api/reviews/:attractionId", function (req, res) {
         db.Review.findAll({
             where: {
-                attractionId: req.params.attractionId
+                attractionSite: req.params.attractionId
             }
         })
-            .then(function (dbReview) {
-                res.json(dbReview);
+            .then(function (dbAttracion) {
+                res.json(dbAttracion);
             });
     });
 
@@ -33,6 +33,7 @@ module.exports = function (app) {
     // ************made the name Review and not Reviews
 
     app.post("/api/reviews", function (req, res) {
+        
         // create takes an argument of an object describing the item we want to insert
         // into our table. In this case we just we pass in an object with a text and
         // complete property
@@ -51,7 +52,7 @@ module.exports = function (app) {
 
 
     // PUT route for updating reviews
-    app.put("/api/reviews", function (req, res) {
+    app.put("/api/reviews/:attractionId", function (req, res) {
         db.Review.update(req.body,
             {
                 where: {

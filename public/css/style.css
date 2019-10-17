@@ -1,4 +1,27 @@
 
+  .container {
+    width: 700px;
+    background-color: blueviolet;
+  }
+
+  .cool-font {
+    background-color: greenyellow;
+    color: burlywood;
+  }
+
+  #review-submit {
+    margin: 10px 0px;
+  }
+
+  .navbar {
+    background-color: red;
+  }
+
+  .navbar-brand {
+    background-color: azure;
+  }
+
+
   #header {
     width: 100%;
     background-color: red;
