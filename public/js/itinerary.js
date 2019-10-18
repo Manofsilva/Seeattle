@@ -105,11 +105,27 @@ var itineraryInput = $("#search").val();
 
 console.log(itineraryInput);
 
+// Add a new row with the attraction
 var row = $("<div>");
     row.addClass("attraction");
-
     row.append("<p>" + itineraryInput + "</p>");
 
+    // The following is the creation of new buttons
+var newButton1 = $("<button>" + "<p> Add to leave a review </p>");
+    newButton1.addClass("newButton");
 
+    row.append(newButton1);
+
+var newButton2 = $("<button>" + "<p> Move to Tomorrow </P>");
+    newButton2.addClass("newButton");
+
+    row.append(newButton2);
+
+var newButton3 = $("<button>" + "<p> Delete From Itinerary </P>");
+    newButton3.addClass("newButton");
+
+    row.append(newButton3);
+
+    // and they will be added to the #first container
     $("#first").prepend(row);
-})
+});

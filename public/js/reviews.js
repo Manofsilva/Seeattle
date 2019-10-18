@@ -10,8 +10,9 @@ $.get("/api/reviews", function(data) {
         row.addClass("review");
   
         row.append("<p>" + data[i].username + " reviewed: </p>");
-        row.append("<p>" + data[i].review + "</p>");
         row.append("<p>" + data[i].AttractionId + "</p>");
+        row.append("<p>" + data[i].review + "</p>");
+        
         row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
   
         $("#review-area").prepend(row);

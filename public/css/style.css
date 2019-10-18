@@ -21,6 +21,15 @@
     background-color: azure;
   }
 
+  .newButton {
+    width: 30%;
+    height: 35%;
+    margin: 5px;
+  }
+
+  .attraction {
+    text-align: center;
+  }
 
   #header {
     width: 100%;
