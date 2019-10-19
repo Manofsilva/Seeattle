@@ -3,32 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>My Google Map</title>
+  <title>Seeattle - Your Trip and Itinerary Planner</title>
   <!-- Latest compiled and minified CSS & JS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" title="no title">
+  <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-  <style>
-      #map {
-        height: 100%;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+ <!-- Font Awesome Kit -->
+ <script src="https://kit.fontawesome.com/e73eb95261.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <style type="text/css">
+    html { height: 100%;}
+    body { height: 100%; margin: 0; padding: 0}
       </style>
-</head>
-
-<body>
-  <h1>My Google Map</h1>
-
-  <div id="map"></div>
-
-  <!-- Script tag so that the API callback can work. Creat a var called map and set it equal to a new google map object -->
-  <script>
+      <!-- The script tag below has a callback set to initMap so I need to have a function above -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeZrxEkr6xV-CR2xEHki58ipGEHcOmFAY&callback=initMap"
+  async defer></script>
+  <script type="text/javascript">
     function initMap(){
       // Map options
       var options = {
@@ -114,13 +107,67 @@
     }
 
     }
-  
   </script>
+</head>
+
+<body onload="initMap()">
 
 
-  <!-- The script tag below has a callback set to initMap so I need to have a function above -->
+<nav class="navbar">
+  <div id="navContainer">
+    <div id="navMain">Seeattle</div>
+    <div id="navLinks">
+      <ul>
+        <li><a href="#"><i class="fas fa-home"></i> Home </a></li>
+        <li><a href="#"><i class="fas fa-clipboard-list"></i> Itinerary </a></li>
+        <li><a href="#"><i class="far fa-comment-alt"></i> Reviews </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<div class="homepage-map-holder" id="planner"> 
+  <div class="homepage">
+    <div class="maps-info">
+      <h1>Seeattle Itinerary Map</h1>
+      <h2>The best way to plan your sightseeing trip to Seattle</h2>
+      <p>Find the attractions that interest you directly on the map!</p>
+      <p>Discover the city's most popular sights as well as the hidden (emerald) gems.</p>
+      <p>Let this app help plan your trip day-by-day.</p>
+
+      <!-- create a button to redirect to itinerary page -->
+
+    </div>
+</div>
+</div>
+
+
+  <div id="map" style="height: 100%"></div>
+
+  <!-- These are some styling divs -->
+  <div id="homepage-more-holder">
+    <div id="homepage-more">
+
+    </div>
+  </div>
+
+  <!-- maybe for some contact us info -->
+  <div id="footer">
+
+    If you  like  us  so much, teel your  friends about your adventures
+  </div>
+ 
+  
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- The script tag below has a callback set to initMap so I need to have a function above
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeZrxEkr6xV-CR2xEHki58ipGEHcOmFAY&callback=initMap"
-  async defer></script>
+  async defer></script> -->
 
 </body>
 

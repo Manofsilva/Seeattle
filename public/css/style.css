@@ -1,4 +1,7 @@
 
+body {
+  background-color: whitesmoke;
+}
   .container {
     width: 700px;
     background-color: blueviolet;
@@ -13,8 +16,53 @@
     margin: 10px 0px;
   }
 
+  #footer {
+    height: 100px;
+    background-color: lightblue;
+    border-style: dashed;
+    border-top: yellow;
+  }
+  .homepage {
+    float: left;
+    width: 50%;
+    padding-top: 5em;
+  }
+
+  h2 {
+    padding-top: 1em;
+  }
+
+  #navContainer {
+    width: 100%;
+  }
+
+  .nav-left {
+    float: left;
+  }
+
+  #navMain {
+    font-size: xx-large;
+    float: left;
+  }
+  
+  #navLinks {
+    float: right;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0px 10px;
+    padding: 0px;
+  }
+
+  li {
+    display: inline;
+  }
+
   .navbar {
-    background-color: red;
+    background-color: lightblue;
+    border-style: dashed;
+    border-bottom: yellow;
   }
 
   .navbar-brand {
@@ -57,5 +105,48 @@
     clear: both;
   }
   #map {
-    height: 500px;
+    background-color: green;
   }
+
+  li {
+    display: inline-flexbox;
+    margin: 10px;
+  }
+
+  #homepage-more {
+    height: 300px;
+    /* max-height: 600px; */
+    /* width: 1000px;
+    background-color: hsla(200,40%,30%,.4); */
+    background-image:		
+      /* url('/public/img/first.png'), 
+      url('/public/img/second.png'), */
+      url('../public/img/third.jpg');
+      /* url('/public/img/fourth.png'),
+      url('/public/img/fifth.png'); */
+    background-repeat: repeat-x;
+    /* background-position: 
+      0 20%,
+      0 100%,
+      0 50%,
+      0 100%,
+      0 0;
+    background-size: 
+      2800px,
+      900px 180px,
+      1700px 400px,
+      1000px,
+      400px 260px;
+    animation: 50s para infinite linear;
+    }
+  
+  @keyframes para {
+    100% {
+      background-position: 
+        -5000px 20%,
+        -800px 95%,
+        500px 50%,
+        1000px 100%,
+        400px 0;
+      } */
+    };
