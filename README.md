@@ -10,14 +10,19 @@ Tourists using this application are able to manage their sightseeing adventures 
 ```SETUP OF THE APPLICATION```
 
 *The main page consists of a Google Map that has some pre-loaded popular attractions as suggestions for tourists to see.
+
 *The itinerary page consists of creating the itinerary list of attractions. Users get to add items to their lists.
+
 *Reviews page consists of three fields that asks for their name, the tourist attraction they would like to review, and a textbox for them to leave the reivew.
 
 ```TECHNOLOGIES```
 
 *Express
+
 *Sequelize
+
 *MySQL 
 
 *Google Maps API
+
 *Google Places API
