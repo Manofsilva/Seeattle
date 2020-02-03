@@ -1,11 +1,12 @@
 # Seeattle
 ```OVERVIEW```
 
-See.attle is an itinenerary management application geared towards tourists new to Seattle giving them the ability to create and manage a list of the city’s tourist attractions. 
+- See.attle is an itinenerary management application geared towards tourists new to Seattle. It gives them the ability to create and manage a list of the city’s tourist attractions. 
 
-It provides tourists with options on how to reach their destination through multiple modes of transportation with the help of the Google Maps API. As well as getting them acquainted with the local transportation.
+- Tourists using this application are able to manage their sightseeing adventures by searching for their attraction and decided which day makes more sense for them to see the attraction. 
 
-Tourists using this application are able to manage their sightseeing adventures by searching for their attraction and pushing the search into their itinerary for the day of their choice! They decide on whether they have ample time to see it today or if they would like to see it tomorrow.
+- They decide on whether they have ample time to see it today or if they would like to see it tomorrow.
+
 
 ```SETUP OF THE APPLICATION```
 
