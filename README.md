@@ -26,3 +26,11 @@ Tourists using this application are able to manage their sightseeing adventures 
 *Google Maps API
 
 *Google Places API
+
+### Live Site
+
+You can find this application hosted on Heroku: https://seeattle.herokuapp.com/ 
+
+### Demonstration
+
+![gif](Seeattle.gif)
